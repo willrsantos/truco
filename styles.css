@@ -30,7 +30,7 @@ h1 {
     min-width: 32px;
     height: auto;
     aspect-ratio: 2/3;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -38,7 +38,7 @@ h1 {
     transition: transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
     position: relative;
-    padding: 4px;
+    padding: 1px;
 }
 
 .carta:hover {
@@ -60,7 +60,7 @@ h1 {
 .naipe-basto { color: #4caf50; }
 
 .explicacao {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
     padding: 16px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.08);
@@ -134,7 +134,7 @@ h1 {
     font-size: 1.2rem;
     border-radius: 50%;
     border: none;
-    background: #eee;
+    background: #eeeeee00;
     cursor: pointer;
     transition: background 0.2s;
 }
@@ -148,6 +148,19 @@ h1 {
     font-weight: bold;
     margin-top: 4px;
     letter-spacing: 1px;
+}
+
+.ordem-imagem {
+    padding: 0;
+    background: none;
+    box-shadow: none;
+}
+
+.imagem-ordem {
+    width: 100%;
+    max-width: 85%;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Responsividade para tablets */

@@ -128,10 +128,10 @@ document.addEventListener('DOMContentLoaded', () => {
             cartaDiv.appendChild(img);
 
             const nomeDiv = document.createElement('div');
-            nomeDiv.style.textAlign = 'center';
+            nomeDiv.style.textAlign = 'center'; 
             nomeDiv.style.fontWeight = 'bold';
-            nomeDiv.style.fontSize = '0.95rem';
-            nomeDiv.style.marginTop = '4px';
+            nomeDiv.style.fontSize = '0.60rem';
+            nomeDiv.style.marginTop = '3px';
             nomeDiv.textContent = manilhaNomes[naipe];
 
             bloco.appendChild(cartaDiv);
