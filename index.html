@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual do Truco para Leigos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- <h1>Manual do Truco</h1> -->
+    
+    <div class="explicacao">
+        <!-- <h2>Ordem das Cartas no Truco</h2> -->
+        <img src="assets/ordem.png" alt="Ordem das cartas do truco: Mais fraco à esquerda, mais forte à direita" style="width:100%;max-width:85%;display:block;margin:auto;">
+    </div>
+    
+    <div class="carta-container" id="cartas-container">
+        <!-- As cartas serão inseridas aqui via JavaScript -->
+    </div>
+
+    <div class="explicacao">
+        <div id="manilha-destacada"></div>
+        <p id="texto-manilha"></p>
+    </div>
+    
+    <!-- <div class="explicacao">
+        <p>Passe o mouse sobre as cartas para visualizá-las melhor.</p>
+        <p>Lembrando que no truco, o naipe não importa para a força da carta, apenas seu valor.</p>
+    </div> -->
+    
+    <div id="placar-container">
+        <div class="dupla">
+            <div class="circulo azul"></div>
+            <div class="pontos" id="pontos-azul">0</div>
+            <div class="botoes">
+                <button onclick="alterarPontos('azul', 1)">+</button>
+                <button onclick="alterarPontos('azul', -1)">-</button>
+            </div>
+            <!-- <div class="nome-dupla">DUPLA 1</div> -->
+        </div>
+        <div class="dupla">
+            <div class="circulo vermelho"></div>
+            <div class="pontos" id="pontos-vermelho">0</div>
+            <div class="botoes">
+                <button onclick="alterarPontos('vermelho', 1)">+</button>
+                <button onclick="alterarPontos('vermelho', -1)">-</button>
+            </div>
+            <!-- <div class="nome-dupla">DUPLA 2</div> -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

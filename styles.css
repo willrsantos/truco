@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    color: #d32f2f;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.carta-container,
+#cartas-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding-bottom: 8px;
+    gap: 8px;
+    overflow-x: visible; /* Não mostra barra de rolagem */
+}
+
+.carta {
+    flex: 0 1 auto;
+    width: calc(100vw / 11 - 10px); /* 11 cartas por linha, ajusta conforme necessário */
+    max-width: 100px;
+    min-width: 32px;
+    height: auto;
+    aspect-ratio: 2/3;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    position: relative;
+    padding: 4px;
+}
+
+.carta:hover {
+    transform: scale(1.07);
+    /* box-shadow: 0 5px 15px rgba(0,0,0,0.25); */
+    z-index: 10;
+}
+
+.imagem-carta {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.naipe-ouro { color: #ffc107; }
+.naipe-espada { color: #333; }
+.naipe-copa { color: #d32f2f; }
+.naipe-basto { color: #4caf50; }
+
+.explicacao {
+    background-color: white;
+    padding: 16px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+#manilha-destacada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 0;
+    min-height: 100px;
+}
+
+.manilha-carta {
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 12px #000000;
+    transform: scale(1.15);
+    margin: 0 8px;
+}
+
+#placar-container {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    margin: 32px 0 16px 0;
+}
+
+.dupla {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+}
+
+.circulo {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    border: 3px solid #ccc;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.azul {
+    background: #1976d2;
+    border-color: #1976d2;
+}
+
+.vermelho {
+    background: #d32f2f;
+    border-color: #d32f2f;
+}
+
+.pontos {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.botoes {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.botoes button {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.botoes button:hover {
+    background: #ccc;
+}
+
+.nome-dupla {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 4px;
+    letter-spacing: 1px;
+}
+
+/* Responsividade para tablets */
+@media (min-width: 600px) {
+    .carta {
+        max-width: 80px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Responsividade para desktop */
+@media (min-width: 900px) {
+    .carta {
+        max-width: 100px;
+    }
+    .carta-container,
+    #cartas-container {
+        padding-bottom: 16px;
+    }
+}
